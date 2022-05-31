@@ -15,8 +15,6 @@ const useFetch = (url) => { //3]use url as fetch parameter
           .then(data => {
               setBlogs(data);
           })
-         
-
          // return () => abortCont.abort(); useEffect cleanup
 
       },[url] );
