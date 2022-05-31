@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const Create = () => {
 
@@ -7,6 +8,9 @@ const Create = () => {
     const[author,setAuthor]=useState('mario');
 
     const[loading,setloading] =useState(false);
+
+    //routing 
+    const history = useHistory();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -22,6 +26,7 @@ const Create = () => {
          }).then( () => {
              console.log('Submitted');
              setloading(false);
+             history.push("/"); //routing
          })
     }
 
